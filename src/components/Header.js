@@ -1,6 +1,8 @@
 import Image from 'next/image';
 import { BiSearch } from 'react-icons/bi';
-import {AiOutlineShoppingCart} from 'react-icons/ai'
+import { AiOutlineShoppingCart, AiOutlineMenu } from 'react-icons/ai';
+// import { AiOutlineMenu } from 'react-icons/Io';
+
 
 function Header() {
   return (
@@ -23,29 +25,49 @@ function Header() {
             className='p-2 h-full w-6 flex-grow flex-shrink rounded-l-md focus:outline-none px-4'
             type='text'
           />
-          <BiSearch size={'30px'} className='p-1' />
+          <BiSearch size={'30px'} className='p-2' />
+        </div>
+
+        {/* {Right side} */}
+        <div className='text-white flex items-center text-xs space-x-6 mx-6 whitespace-nowrap'>
+          <div className='link'>
+            <p>Hello Faith Uju</p>
+            <p className='font-extrabold md:text-sm'>Account & Lists</p>
+          </div>
+
+          <div className='link'>
+            <p>Returns</p>
+            <p className='font-extrabold md:text-sm'>& Orders</p>
+          </div>
+
+          <div className='relative link flex items-center'>
+            <span className='absolute top-0 right-0 md:right-10 h-4 w-4 bg-yellow-400 text-center rounded-full text-black font-bold'>
+              0
+            </span>
+            <AiOutlineShoppingCart size={'20px'} className='h-10' />
+            <p className='hidden md:inline font-extrabold md:text-sm mt-2'>
+              Basket
+            </p>
+          </div>
         </div>
       </div>
 
-    {/* {Right side} */}
-<div>
-  <div className='text-white'>
-    <p>Hello Faith Uju</p>
-    <p>Account & Lists</p>
-
-  </div>
-
-  <div>
-    <p>Returns</p>
-    <p>& Orders</p>
-  </div>
-
-  <div>
-<AiOutlineShoppingCart/>
-  </div>
-</div>
       {/* {Bottom nav} */}
-      <div></div>
+      <div className='flex items-center space-x-3 p-2 pl-6 bg-amazon_blue-light text-white text-sm'>
+        <AiOutlineMenu className='h-6 mr-1' />
+        <p className='link flex items-center'>All</p>
+        <p className='link'>Prime Video</p>
+        <p className='link'>Amazon Business</p>
+        <p className='link'>Today's Deals</p>
+        <p className='link hidden lg:inline-flex'>Electronics</p>
+        <p className='link hidden lg:inline-flex'>Food & Grocery</p>
+        <p className='link hidden lg:inline-flex'>Prime</p>
+        <p className='link hidden lg:inline-flex'>Buy Again</p>
+        <p className='link hidden lg:inline-flex'>Shopper Toolkit</p>
+        <p className='link hidden lg:inline-flex'>Health & Personal Care</p>
+
+
+      </div>
     </header>
   );
 }
