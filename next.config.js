@@ -8,7 +8,7 @@ module.exports = {
     domains: ['links.papareact.com', 'fakestoreapi.com'],
   },
   experimental: {
-    appDir: true,
+    appDir: false,
   }
 };
 // nextConfig
