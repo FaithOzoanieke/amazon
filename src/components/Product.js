@@ -38,8 +38,9 @@ function Products({ id, title, price, description, category, image }) {
       {/* <div className='mb-5'>
         <Currency quantity={price} currency='GBP' />
       </div> */}
-       <div className='mb-5'>
-        <p>{price}</p>
+       <div className='mb-5 flex'>
+        <div className=''><p>$</p></div>
+        <div className=''><p>{price}</p></div>
       </div>
 
       {hasPrime && (
