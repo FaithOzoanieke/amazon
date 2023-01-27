@@ -7,14 +7,14 @@ export default function Home({ products }) {
   return (
     <div className='bg-gray-100'>
       <Head>
-        <title>Amazon 2.0</title>
+        <title>Amazon 2.0 by TechDynast</title>
       </Head>
 
       {/* {Header}  */}
       <Header />
 
       {/* {Main Container} */}
-      <main className='max-w-7xl mx-auto'>
+      <main className='max-w-screen-xl mx-auto'>
         {/* {Banner} */}
         <Banner />
 

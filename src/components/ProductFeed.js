@@ -23,7 +23,7 @@ function ProductFeed({ products }) {
       <Image
         className='md:col-span-full'
         src='https://links.papareact.com/dyz'
-        width={1400}
+        width={1600}
         height={200}
         alt='banner'
       />
