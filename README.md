@@ -1,3 +1,5 @@
+Use the link to check the amazon clone https://amazon-flame-ten.vercel.app/
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
