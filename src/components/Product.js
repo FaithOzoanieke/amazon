@@ -3,7 +3,7 @@ import React from 'react';
 import { useState } from 'react';
 import { BsStarFill } from 'react-icons/bs';
 import ReadMoreReact from 'read-more-react';
-import Currency from 'react-currency-formatter';
+// import Currency from 'react-currency-formatter';
 
 const MAX_RATING = 5;
 const MIN_RATING = 1;
@@ -35,8 +35,11 @@ function Products({ id, title, price, description, category, image }) {
       {/* <p className='text-xs my-2 '>{description}</p> */}
       <ReadMoreReact text={description} />
 
-      <div className='mb-5'>
+      {/* <div className='mb-5'>
         <Currency quantity={price} currency='GBP' />
+      </div> */}
+       <div className='mb-5'>
+        <p>{price}</p>
       </div>
 
       {hasPrime && (
