@@ -1,6 +1,9 @@
 import Image from 'next/image';
 import { BiSearch } from 'react-icons/bi';
 import { AiOutlineShoppingCart, AiOutlineMenu } from 'react-icons/ai';
+// import { signIn, signOut, useSession } from 'next-auth/client';
+import { useSession, signIn, signOut } from "next-auth/react";
+
 
 function Header() {
   return (
@@ -29,7 +32,7 @@ function Header() {
 
         {/* {Right side} */}
         <div className='text-white flex items-center text-xs space-x-6 mx-6 whitespace-nowrap'>
-          <div className='link'>
+          <div onClick={signIn} className='link cursor-pointer'>
             <p>Hello Faith Uju</p>
             <p className='font-extrabold md:text-sm'>Account & Lists</p>
           </div>
@@ -64,8 +67,6 @@ function Header() {
         <p className='link hidden lg:inline-flex'>Buy Again</p>
         <p className='link hidden lg:inline-flex'>Shopper Toolkit</p>
         <p className='link hidden lg:inline-flex'>Health & Personal Care</p>
-
-
       </div>
     </header>
   );
