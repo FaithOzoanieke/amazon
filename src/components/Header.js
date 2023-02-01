@@ -32,7 +32,7 @@ function Header() {
 
         {/* {Right side} */}
         <div className='text-white flex items-center text-xs space-x-6 mx-6 whitespace-nowrap'>
-          <div onClick={() => signIn("google")} className='link cursor-pointer'>
+          <div onClick={() => {signIn("google")}} className='link cursor-pointer'>
             <p>Hello Faith Uju</p>
             <p className='font-extrabold md:text-sm'>Account & Lists</p>
           </div>
