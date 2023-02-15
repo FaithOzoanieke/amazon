@@ -7,10 +7,17 @@ import { SessionProvider } from 'next-auth/react';
 const MyApp = ({ Component, pageProps }) => {
   return (
     // <AuthProvider session ={pageProps.session}>
-    <SessionProvider session={pageProps.session}>
-      <Component {...pageProps} />
-    </SessionProvider>
+    // Provider
+    // <SessionProvider store={store} session={pageProps.session}>
+    //   <Component {...pageProps} />
+    // </SessionProvider>
     // </AuthProvider>
+
+    <Provider store={store}>
+      <SessionProvider session={pageProps.session}>
+        <Component {...pageProps} />
+      </SessionProvider>
+    </Provider>
   );
 };
 
