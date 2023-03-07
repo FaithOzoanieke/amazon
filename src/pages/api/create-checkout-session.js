@@ -16,20 +16,20 @@ export default async (req, res) => {
   }));
 
   const session = await stripe.checkout.sessions.create({
-    payment_method_types: ["card"],
-    shipping_rates:['shr_1MigEyA5OmylbvaaWDGOKWIc'],
+    payment_method_types: ['card'],
+    shipping_rates: ['shr_1MigEyA5OmylbvaaWDGOKWIc'],
     shipping_address_collection: {
-        allowed_countries: ['GB', 'NG', 'US']
+      allowed_countries: ['GB', 'NG', 'US'],
     },
     line_items: transformedItems,
     mode: 'payment',
     success_url: `${process.env.HOST}/success`,
     cancel_url: `${process.env.HOST}/checkout`,
     metdata: {
-        email,
-        images: JSON.stringify(items.map(item => item.image))
-    }
+      email,
+      images: JSON.stringify(items.map((item) => item.image)),
+    },
   });
 
-  res.status(200).json({id: session.id})
+  res.status(200).json({ id: session.id });
 };
